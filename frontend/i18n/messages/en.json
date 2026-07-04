@@ -1,0 +1,95 @@
+{
+  "app": {
+    "title": "KiotBean - Coffee Purchase Management",
+    "description": "Coffee purchase and cashbook management software"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "status": "Status",
+    "actions": "Actions",
+    "total": "Total",
+    "date": "Date",
+    "noData": "No data"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "orders": "Purchase Orders",
+    "cashflow": "Cashbook",
+    "price": "Coffee Price",
+    "users": "Users"
+  },
+  "auth": {
+    "superadmin": "Super Admin",
+    "user": "User",
+    "role": "Role",
+    "switchRole": "Switch Role"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "totalOrders": "Total Orders",
+    "netWeightToday": "Net Weight Today",
+    "totalExpenseToday": "Total Expense Today",
+    "currentPrice": "Current Price",
+    "recentOrders": "Recent Orders",
+    "kg": "kg",
+    "vnd": "₫"
+  },
+  "orders": {
+    "title": "Purchase Orders",
+    "createOrder": "Create Purchase Order",
+    "orderCode": "Order #",
+    "totalBags": "Total Bags",
+    "grossWeight": "Gross Weight",
+    "bagTareWeight": "Bag Tare Weight",
+    "moisture": "Moisture",
+    "impurityRate": "Impurity Rate",
+    "netWeight": "Net Weight",
+    "unitPrice": "Unit Price",
+    "totalAmount": "Total Amount",
+    "paymentMethod": "Payment Method",
+    "bags": "bags",
+    "completed": "Completed",
+    "pending": "Pending",
+    "paymentCash": "Cash",
+    "orderCreated": "Purchase Order Created",
+    "orderId": "Order #",
+    "orderInfo": "Order Information",
+    "payment": "Payment",
+    "backToList": "Back to List"
+  },
+  "cashflow": {
+    "title": "Cashbook",
+    "totalIn": "Total In",
+    "totalOut": "Total Out",
+    "balance": "Balance",
+    "type": "Type",
+    "amount": "Amount",
+    "category": "Category",
+    "note": "Note",
+    "in": "IN",
+    "out": "OUT"
+  },
+  "price": {
+    "title": "Coffee Price",
+    "currentPrice": "Current Price",
+    "noPrice": "No price set yet",
+    "updatePrice": "Update Price",
+    "newPrice": "New Price (₫/kg)",
+    "update": "Update"
+  },
+  "users": {
+    "title": "Users",
+    "userList": "User List",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "switchRole": "Switch Role"
+  }
+}

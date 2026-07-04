@@ -1,0 +1,95 @@
+{
+  "app": {
+    "title": "KiotBean - Quản lý mua cà phê",
+    "description": "Phần mềm quản lý mua cà phê và sổ quỹ"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "back": "Quay lại",
+    "create": "Tạo mới",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "search": "Tìm kiếm",
+    "status": "Trạng thái",
+    "actions": "Thao tác",
+    "total": "Tổng",
+    "date": "Ngày",
+    "noData": "Không có dữ liệu"
+  },
+  "nav": {
+    "dashboard": "Tổng quan",
+    "orders": "Đơn mua",
+    "cashflow": "Sổ quỹ",
+    "price": "Giá cà phê",
+    "users": "Người dùng"
+  },
+  "auth": {
+    "superadmin": "Super Admin",
+    "user": "Người dùng",
+    "role": "Vai trò",
+    "switchRole": "Chuyển vai trò"
+  },
+  "dashboard": {
+    "title": "Tổng quan",
+    "totalOrders": "Tổng đơn mua",
+    "netWeightToday": "KL tịnh hôm nay",
+    "totalExpenseToday": "Tổng chi hôm nay",
+    "currentPrice": "Giá hiện tại",
+    "recentOrders": "Đơn mua gần đây",
+    "kg": "kg",
+    "vnd": "₫"
+  },
+  "orders": {
+    "title": "Đơn mua hàng",
+    "createOrder": "Tạo đơn mua",
+    "orderCode": "Mã ĐH",
+    "totalBags": "Số bao",
+    "grossWeight": "KL tổng",
+    "bagTareWeight": "Bì bao",
+    "moisture": "Độ ẩm",
+    "impurityRate": "Tạp chất",
+    "netWeight": "KL tịnh",
+    "unitPrice": "Đơn giá",
+    "totalAmount": "Thành tiền",
+    "paymentMethod": "Hình thức thanh toán",
+    "bags": "bao",
+    "completed": "Hoàn thành",
+    "pending": "Chờ xử lý",
+    "paymentCash": "Tiền mặt",
+    "orderCreated": "Đơn mua đã tạo",
+    "orderId": "Mã đơn:",
+    "orderInfo": "Thông tin đơn hàng",
+    "payment": "Thanh toán",
+    "backToList": "Về danh sách"
+  },
+  "cashflow": {
+    "title": "Sổ quỹ",
+    "totalIn": "Tổng thu",
+    "totalOut": "Tổng chi",
+    "balance": "Số dư",
+    "type": "Loại",
+    "amount": "Số tiền",
+    "category": "Danh mục",
+    "note": "Ghi chú",
+    "in": "THU",
+    "out": "CHI"
+  },
+  "price": {
+    "title": "Giá cà phê",
+    "currentPrice": "Giá hiện tại",
+    "noPrice": "Chưa có giá",
+    "updatePrice": "Cập nhật giá",
+    "newPrice": "Giá mới (₫/kg)",
+    "update": "Cập nhật"
+  },
+  "users": {
+    "title": "Người dùng",
+    "userList": "Danh sách người dùng",
+    "name": "Tên",
+    "email": "Email",
+    "role": "Vai trò",
+    "switchRole": "Chuyển vai trò"
+  }
+}

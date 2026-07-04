@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-heading: var(--font-sans);
+  --font-sans: var(--font-sans);
+  --color-background: #f7f7f5;
+  --color-foreground: #040404;
+  --color-card: #ffffff;
+  --color-card-foreground: #040404;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #040404;
+  --color-primary: #119da4;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #13505b;
+  --color-secondary-foreground: #d7d9ce;
+  --color-muted: #d7d9ce;
+  --color-muted-foreground: #373737;
+  --color-accent: #0c7489;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #d43f3f;
+  --color-border: #d7d9ce;
+  --color-input: #d7d9ce;
+  --color-ring: #119da4;
+  --color-chart-1: #119da4;
+  --color-chart-2: #0c7489;
+  --color-chart-3: #13505b;
+  --color-chart-4: #d7d9ce;
+  --color-chart-5: #040404;
+  --radius: 0.625rem;
+  --color-sidebar: #13505b;
+  --color-sidebar-foreground: #d7d9ce;
+  --color-sidebar-primary: #119da4;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #119da4;
+  --color-sidebar-accent-foreground: #ffffff;
+  --color-sidebar-border: #0c7489;
+  --color-sidebar-ring: #119da4;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+.dark {
+  --color-background: #040404;
+  --color-foreground: #cdcdcd;
+  --color-card: #1a1a1a;
+  --color-card-foreground: #cdcdcd;
+  --color-popover: #1a1a1a;
+  --color-popover-foreground: #cdcdcd;
+  --color-primary: #17d4de;
+  --color-primary-foreground: #040404;
+  --color-secondary: #0c7489;
+  --color-secondary-foreground: #d7d9ce;
+  --color-muted: #373737;
+  --color-muted-foreground: #9b9b9b;
+  --color-accent: #119da4;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #e56363;
+  --color-border: #373737;
+  --color-input: #373737;
+  --color-ring: #17d4de;
+  --color-chart-1: #17d4de;
+  --color-chart-2: #37cfee;
+  --color-chart-3: #119da4;
+  --color-chart-4: #0c7489;
+  --color-chart-5: #13505b;
+  --color-sidebar: #0a2e35;
+  --color-sidebar-foreground: #b0b49e;
+  --color-sidebar-primary: #17d4de;
+  --color-sidebar-primary-foreground: #040404;
+  --color-sidebar-accent: #119da4;
+  --color-sidebar-accent-foreground: #ffffff;
+  --color-sidebar-border: #0c7489;
+  --color-sidebar-ring: #17d4de;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}

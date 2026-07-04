@@ -4,22 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace KiotBean.Controllers;
 
-[ApiController]
-[Route("api/price")]
-public class PricesController(IMediator mediator) : ControllerBase
+[Route("price")]
+public class PricesController(IMediator mediator) : ApiControllerBase(mediator)
 {
     [HttpGet]
-    public async Task<IActionResult> Get()
-    {
-        var result = await mediator.Send(new GetCurrentPriceQuery());
-        return result is not null ? Ok(result) : NotFound(new { message = "No price set yet" });
-    }
+    public Task<IActionResult> Get()
+        => Send(new GetCurrentPriceQuery());
 
     [HttpPost]
-    public async Task<IActionResult> Set(SetCurrentPriceCommand req)
-    {
-        var result = await mediator.Send(req);
-        return Ok(result);
-    }
+    public Task<IActionResult> Set(SetCurrentPriceCommand req)
+        => Send(req);
 }
 

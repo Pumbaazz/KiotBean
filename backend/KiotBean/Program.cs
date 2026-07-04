@@ -19,7 +19,7 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
 // Add MediatR and FluentValidation services
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
-builder.Services.AddControllers(opts => opts.Filters.Add<ApiResponseFilter>())
+builder.Services.AddControllers()
     .AddJsonOptions(opts =>
     opts.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     );
@@ -41,7 +41,8 @@ builder.Services.AddCors(opts => opts.AddDefaultPolicy(p =>
 
 var app = builder.Build();
 app.UseExceptionHandler();
+app.UsePathBase("/api");
 app.UseCors();
 app.MapControllers();
-app.Run();
 
+app.Run();

@@ -1,14 +1,22 @@
+using FluentValidation;
 using KiotBean.Database;
 using KiotBean.Database.Entities;
 using KiotBean.Features.PurchaseOrders.Models;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using static KiotBean.Middleware.ApiResponseFilter;
 
-namespace KiotBean.Features.PurchaseOrders;
+namespace KiotBean.Features.PurchaseOrders.Services;
 
-public class CreatePurchaseOrderHandler(AppDbContext db) : IRequestHandler<CreatePurchaseOrderCommand, CreatePurchaseOrderResult>
+public class CreatePurchaseOrderHandler(AppDbContext db, IValidator<CreatePurchaseOrderCommand> validator)
+    : IRequestHandler<CreatePurchaseOrderCommand, IActionResult>
 {
-    public async Task<CreatePurchaseOrderResult> Handle(CreatePurchaseOrderCommand req, CancellationToken cancellationToken)
+    public async Task<IActionResult> Handle(CreatePurchaseOrderCommand req, CancellationToken cancellationToken)
     {
+        var validationResult = await validator.ValidateAsync(req, cancellationToken);
+        if (!validationResult.IsValid)
+            return BadRequest("Validation failed");
+
         var impurityWeight = req.GrossWeight * req.ImpurityRate / 100m;
         var moistureDeduction = req.Moisture > 15
             ? req.GrossWeight * (req.Moisture - 15) / 100m
@@ -50,7 +58,7 @@ public class CreatePurchaseOrderHandler(AppDbContext db) : IRequestHandler<Creat
 
             await tx.CommitAsync(cancellationToken);
 
-            return new CreatePurchaseOrderResult(order.Id, order.NetWeight, order.TotalAmount, cashFlow.Id);
+            return Ok(new CreatePurchaseOrderResponse(order.Id, order.NetWeight, order.TotalAmount, cashFlow.Id));
         }
         catch
         {

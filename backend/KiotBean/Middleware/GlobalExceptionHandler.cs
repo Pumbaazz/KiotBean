@@ -1,4 +1,3 @@
-using KiotBean.Models;
 using Microsoft.AspNetCore.Diagnostics;
 
 namespace KiotBean.Middleware;
@@ -9,7 +8,12 @@ public class GlobalExceptionHandler : IExceptionHandler
     {
         context.Response.StatusCode = 500;
         context.Response.ContentType = "application/json";
-        var response = ApiResponse.Fail("An internal error occurred", "INTERNAL_ERROR");
+        var response = new ApiResponse
+        {
+            StatusCode = 500,
+            Message = "Internal Server Error",
+            IsSuccess = false,
+        };
         await context.Response.WriteAsJsonAsync(response, cancellationToken);
         return true;
     }

@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace KiotBean.Features.PurchaseOrders.Models;
 
@@ -10,4 +11,4 @@ public record CreatePurchaseOrderCommand(
     decimal ImpurityRate,
     decimal UnitPrice,
     string PaymentMethod
-) : IRequest<CreatePurchaseOrderResult>;
+) : IRequest<IActionResult>;

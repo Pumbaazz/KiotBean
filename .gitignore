@@ -36,8 +36,9 @@ ScaffoldingReadMe.txt
 # NuGet Symbol Packages
 *.snupkg
 
-# dotenv environment variables file
-.env
+# dotenv local overrides (secrets, personal config)
+.env.local
+.env*.local
 
 # Others
 ~$*
@@ -55,3 +56,16 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# GitNexus knowledge graph index
+.gitnexus/
+
+# Yarn Berry
+.yarn/*
+!.yarnrc.yml
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+frontend/.env.local

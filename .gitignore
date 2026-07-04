@@ -69,3 +69,5 @@ node_modules/
 .next/
 out/
 frontend/.env.local
+
+appsettings.*.json
